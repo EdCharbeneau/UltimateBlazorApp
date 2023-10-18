@@ -1,4 +1,5 @@
 using BlazorApp;
+using BlazorApp.Components.Features.Weather;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 

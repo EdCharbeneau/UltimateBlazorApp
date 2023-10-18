@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp.Server", "BlazorA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp.Maui", "BlazorApp.Maui\BlazorApp.Maui.csproj", "{56C10285-BCB3-4326-A4A7-6058FFC50C4F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp.Tests", "BlazorApp.Tests\BlazorApp.Tests.csproj", "{8636D324-1D1C-4AA4-A344-E27D79E97499}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +37,10 @@ Global
 		{56C10285-BCB3-4326-A4A7-6058FFC50C4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56C10285-BCB3-4326-A4A7-6058FFC50C4F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{56C10285-BCB3-4326-A4A7-6058FFC50C4F}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8636D324-1D1C-4AA4-A344-E27D79E97499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8636D324-1D1C-4AA4-A344-E27D79E97499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8636D324-1D1C-4AA4-A344-E27D79E97499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8636D324-1D1C-4AA4-A344-E27D79E97499}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

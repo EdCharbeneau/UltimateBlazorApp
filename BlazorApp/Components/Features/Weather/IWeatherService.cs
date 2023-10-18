@@ -1,4 +1,4 @@
-﻿namespace BlazorApp;
+﻿namespace BlazorApp.Components.Features.Weather;
 
 public interface IWeatherService
 {
