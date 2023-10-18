@@ -20,8 +20,12 @@ public static class MauiProgram
 #if DEBUG
 		builder.Services.AddBlazorWebViewDeveloperTools();
 		builder.Logging.AddDebug();
+        // If using localhost
+        builder.Services.AddDevHttpClient(7066);
+#else
+            // If using a published development API instead of localhost
+            builder.Services.AddSingleton(sp => new HttpClient { BaseAddress = new Uri("Production API") });
 #endif
-        builder.Services.AddSingleton(HttpClientHelper.CreateHttpClient());
         builder.Services.AddSingleton<IWeatherService, HttpWeatherService>();
 
         return builder.Build();

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BlazorApp.Maui.Helpers;
-public class HttpClientHelper
+﻿namespace BlazorApp.Maui.Helpers;
+public static class HttpClientHelper
 {
-    public static HttpClient CreateHttpClient()
+    public static IServiceCollection AddDevHttpClient(this IServiceCollection services, int sslPort)
     {
 #if ANDROID
         var handler = new Xamarin.Android.Net.AndroidMessageHandler();
@@ -29,10 +23,10 @@ public class HttpClientHelper
 #endif
 
 #if ANDROID
-        httpClient.BaseAddress = new Uri("https://10.0.2.2:7066");
+        httpClient.BaseAddress = new Uri($"https://10.0.2.2:{sslPort}");
 #else
-        httpClient.BaseAddress = new Uri("https://localhost:7066");
+        httpClient.BaseAddress = new Uri($"https://localhost:{sslPort}");
 #endif
-        return httpClient;
+        return services.AddSingleton(httpClient);
     }
 }
